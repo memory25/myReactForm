@@ -15,7 +15,7 @@ const rangeType = auth => {
   const value = Number(auth.value);
 
   if (value !== 0 && !value) {
-    return Object.assign({}, auth, {isValid: false, error: 'expect number'});
+    return Object.assign({}, auth, {isValid: false, error: 'RANGE : expect number'});
   }
 
   const isValid = auth.range.some(range => {
@@ -30,7 +30,7 @@ const rangeType = auth => {
     }
     return value >= min && value <= max;
   });
-  const error = isValid ? '' : 'LENGTH';
+  const error = isValid ? '' : 'RANGE';
 
   return Object.assign({}, auth, {isValid, error});
 };
