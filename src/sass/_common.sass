@@ -1,0 +1,128 @@
+hr
+	height: 2px
+	border: solid 1px #eaeaea
+	margin: 10px 0 10px 0
+	box-sizing: border-box
+
+
+
+/*button*/
+.btn
+	font-family: Roboto
+	border-radius: 2px
+	min-width: 110px
+	height: 35px
+	cursor: pointer
+	border: none
+	text-align: center
+	font-size: 1.4rem
+	box-sizing: border-box
+	color: #fff
+	background: #3e8ede
+	vertical-align: middle
+	padding: 10px
+	&:hover
+  		background: #363637
+	&:focus
+  		outline: none
+  		border-radius: 2.5px
+  		background: #56585a
+	
+.cancelBtn
+	@extend .btn
+	background: #9c9c9c
+	&:hover
+		background: #363637
+		color: #fff
+	&:focus
+		color: #fff
+		background: #56585a
+/*button*/
+
+
+
+/*little block*/
+section.littleSection
+	margin-bottom: 40px
+	&> .localTitle
+			font-size: 1.7rem
+			font-weight: 500
+			color: #232323
+			display: block
+			margin: 0 0 10px 0
+	.block
+		display: flex
+		margin-bottom: 30px
+		.coupleWrap
+			display: flex
+			flex: 0 1 100%
+			flex-direction: column
+			justify-content: space-between
+			box-sizing: border-box
+			margin: 0 15px
+			&:nth-of-type(1)
+				margin-left: 0
+			&:nth-last-of-type(1)
+				margin-right: 0
+			&:nth-of-type(2)
+				margin: 0 15px
+			.keyPair
+				width: 100%
+				font-size: 1.4rem
+				font-weight: 500
+				color: #9b9b9b
+				margin: 0 0 14px 0
+			.valuePair
+				width: 100%
+				label,span
+					vertical-align: middle
+				label.checkboxImg-circle
+					margin: 4.5px 0
+				label.checkboxImg-rect
+					margin: 9px 0
+				span
+					font-size: 1.4rem
+					margin: 0 0 0 10px
+					color: #4a4a4a
+/*little block*/
+
+
+/*form*/
+input ,select
+	width: 100%
+	border-radius: 2px
+	border: solid 1px #dcdee0
+	box-sizing: border-box
+	height: 36px
+	padding: 0 10px
+	font-size: 1.4rem
+	font-weight: 400
+	font-family: Roboto
+
+.password
+	position: relative
+	input
+		padding-right: 32px
+	.icon
+		position: absolute
+		top: 2px
+		right: 2px
+		cursor: pointer
+		
+.icon-password
+	background: url('~svg/ico-32-password.svg') no-repeat 0 0/contain
+	width: 32px
+	height: 32px
+	display: inline-block
+.icon-password-toggle
+	background: url('~svg/ico-32-password-toggle.svg') no-repeat 0 0/contain
+	width: 32px
+	height: 32px
+	display: inline-block
+/*form*/
+
+$invalidColor: #c42032
+.invalidLabel
+	color: $invalidColor !important
+.invalidIpt, .invalidIpt:focus
+	outline: auto $invalidColor !important

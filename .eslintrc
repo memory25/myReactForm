@@ -1,0 +1,142 @@
+{
+  'parser': 'babel-eslint',
+  'extends': [
+    'airbnb',
+    'prettier',
+    'prettier/flowtype',
+    'prettier/react',
+    'prettier/standard',
+  ],
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true,
+      'es6': true
+    }
+  },
+  'env': {
+    'browser': true,
+    'es6': true
+  },
+  'globals': {
+    '__RELEASE__': false,
+    '__DEV__': false
+  },
+  'plugins': [
+    'react',
+    'jsx-a11y',
+    'import',
+    'babel',
+    'prettier'
+  ],
+  'rules': {
+    'prettier/prettier': 'error',
+
+    ##temp
+    'no-console': 'off',
+
+    ## Best Practices
+    'class-methods-use-this': 'off',
+    'consistent-return': 'off',
+    'curly': 'warn',
+    'no-eq-null': 'error',
+    'no-invalid-this': 'off',
+    'no-param-reassign': ['error', { 'props': false }],
+    'no-redeclare': ['error', { 'builtinGlobals': true }],
+    'no-return-assign': ['error', 'except-parens'],
+    'no-unmodified-loop-condition': 'error',
+    'no-useless-call': 'error',
+    'no-warning-comments': 'warn',
+    'wrap-iife': ['error', 'inside'],
+    'yoda': ['warn', 'never'],
+
+
+    ## Variables
+    'no-shadow': 'warn',
+    'no-unused-vars': 'warn',
+	
+
+    ## Stylistic Issues
+    'array-bracket-spacing': ['warn', 'never'],
+    'block-spacing': 'warn',
+    //'brace-style': ['warn', 'stroustrup'],
+    'comma-spacing': 'warn',
+    'comma-style': ['warn', 'last'],
+    'computed-property-spacing': ['warn', 'never'],
+    'eol-last': 'warn',
+    'func-call-spacing': ['warn', 'never'],
+    //'indent': ['warn', 2, { 'SwitchCase': 1 }], //??
+    //'jsx-quotes': ['warn', 'prefer-single'],   //prettierrc can't single quotes in jsx
+    'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }],
+    'linebreak-style': 0,
+    'lines-around-comment': ['warn', { 'beforeBlockComment': true }],
+    'max-len': 'off',
+    'newline-after-var': ['warn', 'always'],
+    'newline-per-chained-call': ['warn', { 'ignoreChainWithDepth': 5 }],
+    'no-multiple-empty-lines': 'warn',
+    'no-plusplus': ['error', { "allowForLoopAfterthoughts": true }],
+    'no-trailing-spaces': ['warn', { 'skipBlankLines': false }],
+    'no-underscore-dangle': 'off',
+    /*'object-curly-newline': ['warn', {
+      ObjectExpression: { minProperties: 0, multiline: true },
+      ObjectPattern: { minProperties: 0, multiline: true }
+    }],*/
+    'object-curly-spacing': ['warn', 'never'],
+    'object-property-newline': 'warn',
+    'one-var': 'off',
+    'one-var-declaration-per-line': ['warn', 'initializations'],
+    //'quote-props': ['warn', 'always'], // conflict with prettier
+    'quotes': ['warn', 'single'],
+    'semi-spacing': ['warn', { 'before': false, 'after': true }],
+    'space-before-blocks': ['warn', 'always'],
+    'space-before-function-paren': ['warn', {
+      'anonymous': 'always',
+      'named': 'never',
+      'asyncArrow': 'always'
+    }],
+    'space-in-parens': ['warn', 'never'],
+    'space-infix-ops': 'warn',
+    'space-unary-ops': 'warn',
+    'spaced-comment': ['warn', 'always'],
+    'wrap-regex': 'warn',
+
+
+    ## ECMAScript 6
+    'no-useless-constructor': 'off',
+    'prefer-const': ['warn', {
+      destructuring: 'any',
+      ignoreReadBeforeAssign: true,
+    }],
+    'prefer-template': 'off', // TBD
+
+
+	## import // handle in webpack
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'warn',
+
+
+    ## react
+    //'react/jsx-closing-bracket-location': ['error', {selfClosing: 'props-aligned', nonEmpty: 'tag-aligned'}], // TBD
+    'react/jsx-filename-extension': ['error', { 'extensions': ['.js', '.jsx'] }],
+    'react/jsx-no-bind': ['error', {
+      ignoreRefs: true,
+      allowArrowFunctions: true,
+      allowBind: false,
+    }],
+    'react/prefer-stateless-function': 'warn',
+    'react/prop-types': 'off',
+
+
+    ## jsx
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/img-redundant-alt': 'warn',
+    'jsx-a11y/label-has-for': 'off',
+
+
+    ## babel
+    'babel/no-invalid-this': 'error',
+  }
+}
